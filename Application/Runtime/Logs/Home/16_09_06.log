@@ -1,0 +1,231 @@
+[ 2016-09-06T09:32:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.050517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.050663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056591s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0477s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0495s ]
+SQL: SELECT * FROM `aai_post` WHERE `hot` = 1 AND `status` = 'publish' ORDER BY id desc  [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001365s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.335162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.336986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.053530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.055089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.039349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.043013s ]
+
+[ 2016-09-06T09:35:44+08:00 ] 127.0.0.1 /?c=Post&a=detail&postid=2593
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000236s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002472s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0469s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0507s ]
+SQL: SELECT * FROM `aai_post` WHERE `id` = 2593 AND `status` = 'publish' LIMIT 1   [ RunTime:0.0473s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0472s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0465s ]
+SQL: SELECT * FROM `aai_comments` WHERE `comment_post_id` = 2593 ORDER BY comment_id desc   [ RunTime:0.0463s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000985s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002275s ]
+NOTIC: [8] Undefined index: descirbe E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Runtime\Cache\Home\2ae952bfbc2fd5af8552fdff1c1aa73c.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002375s ]
+
+[ 2016-09-06T09:35:50+08:00 ] 127.0.0.1 /?c=Post&a=detail&postid=2593
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000242s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002551s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0461s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0463s ]
+SQL: SELECT * FROM `aai_post` WHERE `id` = 2593 AND `status` = 'publish' LIMIT 1   [ RunTime:0.0469s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0464s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0471s ]
+SQL: SELECT * FROM `aai_comments` WHERE `comment_post_id` = 2593 ORDER BY comment_id desc   [ RunTime:0.0458s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000938s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002219s ]
+NOTIC: [8] Undefined index: descirbe E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Runtime\Cache\Home\2ae952bfbc2fd5af8552fdff1c1aa73c.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001227s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002501s ]
+
+[ 2016-09-06T09:36:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000220s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002281s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0488s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0478s ]
+SQL: SELECT * FROM `aai_post` WHERE `hot` = 1 AND `status` = 'publish' ORDER BY id desc  [ RunTime:0.0479s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002915s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002411s ]
+
+[ 2016-09-06T10:50:44+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000248s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011632s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0478s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0478s ]
+SQL: SELECT * FROM `aai_post` WHERE `hot` = 1 AND `status` = 'publish' ORDER BY id desc  [ RunTime:0.0466s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002436s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002741s ]
+
+[ 2016-09-06T11:03:04+08:00 ] 127.0.0.1 /?c=Post&a=detail&postid=2593
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000564s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010413s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0456s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0469s ]
+SQL: SELECT * FROM `aai_post` WHERE `id` = 2593 AND `status` = 'publish' LIMIT 1   [ RunTime:0.0468s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0457s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0457s ]
+SQL: SELECT * FROM `aai_comments` WHERE `comment_post_id` = 2593 ORDER BY comment_id desc   [ RunTime:0.0464s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002465s ]
+NOTIC: [8] Undefined index: descirbe E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Runtime\Cache\Home\2ae952bfbc2fd5af8552fdff1c1aa73c.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.114833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002772s ]
+
+[ 2016-09-06T11:03:34+08:00 ] 127.0.0.1 /?c=Post&a=detail&postid=2593
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000232s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002503s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0466s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0471s ]
+SQL: SELECT * FROM `aai_post` WHERE `id` = 2593 AND `status` = 'publish' LIMIT 1   [ RunTime:0.0463s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0461s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0465s ]
+SQL: SELECT * FROM `aai_comments` WHERE `comment_post_id` = 2593 ORDER BY comment_id desc   [ RunTime:0.0463s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002874s ]
+NOTIC: [8] Undefined index: descirbe E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Runtime\Cache\Home\2ae952bfbc2fd5af8552fdff1c1aa73c.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002691s ]
+
+[ 2016-09-06T11:03:51+08:00 ] 127.0.0.1 /?c=Post&a=detail&postid=2593
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000229s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002652s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0476s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0466s ]
+SQL: SELECT * FROM `aai_post` WHERE `id` = 2593 AND `status` = 'publish' LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0473s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0484s ]
+SQL: SELECT * FROM `aai_comments` WHERE `comment_post_id` = 2593 ORDER BY comment_id desc   [ RunTime:0.0475s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002916s ]
+NOTIC: [8] Undefined index: descirbe E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Runtime\Cache\Home\2ae952bfbc2fd5af8552fdff1c1aa73c.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002719s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002836s ]
+
+[ 2016-09-06T11:09:27+08:00 ] 127.0.0.1 /?c=Post&a=detail&postid=2593
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000231s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002412s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0508s ]
+SQL: SHOW COLUMNS FROM `aai_post` [ RunTime:0.0518s ]
+SQL: SELECT * FROM `aai_post` WHERE `id` = 2593 AND `status` = 'publish' LIMIT 1   [ RunTime:0.0511s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0506s ]
+SQL: SHOW COLUMNS FROM `aai_comments` [ RunTime:0.0503s ]
+SQL: SELECT * FROM `aai_comments` WHERE `comment_post_id` = 2593 ORDER BY comment_id desc   [ RunTime:0.0499s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000955s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002239s ]
+NOTIC: [8] Undefined index: descirbe E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Runtime\Cache\Home\2ae952bfbc2fd5af8552fdff1c1aa73c.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002323s ]
+

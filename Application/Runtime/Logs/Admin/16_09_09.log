@@ -1,0 +1,154 @@
+[ 2016-09-09T09:53:08+08:00 ] 127.0.0.1 /admin.php?c=Admin&a=initAdd&menuid=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000235s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003035s ]
+SQL: SHOW COLUMNS FROM `aai_admin_rules` [ RunTime:0.0462s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 663 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 661 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0458s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0461s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0467s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0464s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0461s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0453s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0473s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0464s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SHOW COLUMNS FROM `aai_admin_group` [ RunTime:0.0461s ]
+SQL: SELECT * FROM `aai_admin_group`  [ RunTime:0.0447s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002730s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.114663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002981s ]
+
+[ 2016-09-09T09:56:01+08:00 ] 127.0.0.1 /admin.php?c=Admin&a=initAdd&menuid=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000255s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002736s ]
+SQL: SHOW COLUMNS FROM `aai_admin_rules` [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 663 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 661 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0453s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0454s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0457s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0454s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0495s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SHOW COLUMNS FROM `aai_admin_group` [ RunTime:0.0456s ]
+SQL: SELECT * FROM `aai_admin_group`  [ RunTime:0.0452s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002896s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002568s ]
+
+[ 2016-09-09T09:56:15+08:00 ] 127.0.0.1 /admin.php?c=Admin&a=add&menuid=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000325s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002474s ]
+SQL: SHOW COLUMNS FROM `aai_admin_rules` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 663 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0447s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 661 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0476s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0449s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0448s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0451s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0451s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0454s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0446s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0444s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0447s ]
+SQL: SHOW COLUMNS FROM `aai_users` [ RunTime:0.0462s ]
+SQL: SELECT * FROM `aai_users` WHERE `user_login` = 'test' LIMIT 1   [ RunTime:0.0481s ]
+SQL: SELECT * FROM `aai_users` WHERE `user_phone` = '123456789' LIMIT 1   [ RunTime:0.0451s ]
+SQL: INSERT INTO `aai_users` (`user_login`,`user_phone`,`user_nicename`,`user_email`,`user_activation_key`,`user_pass`,`user_registered`) VALUES ('test','123456789','test','test@test.com','e8a1d','300e592d47cf56a832885c1151fe2b5c','2016-09-09 09:56:15') [ RunTime:0.0729s ]
+SQL: SHOW COLUMNS FROM `aai_usermeta` [ RunTime:0.0465s ]
+SQL: INSERT INTO `aai_usermeta` (`user_id`,`meta_key`,`meta_value`) VALUES ('27','admin_group_admin','14') [ RunTime:0.0486s ]
+SQL: SELECT a.`user_login`,a.`user_phone`,a.`user_nicename`,a.`user_email`,c.`title`,a.`user_registered` 
+			FROM aai_users  a 
+			INNER JOIN aai_usermeta b ON  b.meta_key = 'admin_group_admin' AND a.id = b.`user_id`
+			INNER JOIN aai_admin_group c ON b.`meta_value` = c.`gid` [ RunTime:0.0461s ]
+
+[ 2016-09-09T09:56:16+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Admin&a=index&menuid=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000335s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002388s ]
+SQL: SHOW COLUMNS FROM `aai_admin_rules` [ RunTime:0.0464s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 663 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0462s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `id` = 661 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0470s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\ananinfo_github\ananinfo_web\php\ananinfo_web\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0466s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0465s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0460s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0493s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0459s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0467s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0456s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0461s ]
+SQL: SELECT * FROM `aai_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT a.`user_login`,a.`user_phone`,a.`user_nicename`,a.`user_email`,c.`title`,a.`user_registered` 
+			FROM aai_users  a 
+			INNER JOIN aai_usermeta b ON  b.meta_key = 'admin_group_admin' AND a.id = b.`user_id`
+			INNER JOIN aai_admin_group c ON b.`meta_value` = c.`gid` [ RunTime:0.0455s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.126835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.128199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002359s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002367s ]
+
