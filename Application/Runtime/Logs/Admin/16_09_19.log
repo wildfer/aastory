@@ -13272,3 +13272,93 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002296s ]
 
+[ 2016-09-19T18:06:12+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000227s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002776s ]
+SQL: SHOW COLUMNS FROM `aas_admin_rules` [ RunTime:0.0456s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `id` = 0 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0451s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\aastory\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\aastory\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0454s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0453s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0449s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0458s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0451s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0451s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0452s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0454s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0491s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000975s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002266s ]
+NOTIC: [2] Missing argument 3 for getNavUrlEx(), called in E:\code\aastory\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php on line 48 and defined E:\code\aastory\Application\Admin\Common\function.php 第 73 行.
+NOTIC: [8] Undefined variable: menuid E:\code\aastory\Application\Admin\Common\function.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001266s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002551s ]
+
+[ 2016-09-19T18:06:16+08:00 ] 127.0.0.1 /admin.php?c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000217s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002133s ]
+SQL: SHOW COLUMNS FROM `aas_admin_rules` [ RunTime:0.0487s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `id` = 0 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0490s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\aastory\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\aastory\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0493s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0492s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0491s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0492s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0493s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0491s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0488s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0491s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0489s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0490s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0485s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0486s ]
+SQL: SHOW COLUMNS FROM `aas_users` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `aas_users` WHERE `user_login` = 'dd' LIMIT 1   [ RunTime:0.0487s ]
+
+[ 2016-09-19T18:06:27+08:00 ] 127.0.0.1 /admin.php?c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000223s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+SQL: SHOW COLUMNS FROM `aas_admin_rules` [ RunTime:0.0498s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `id` = 0 AND `status` = 1 ORDER BY orderid  LIMIT 1   [ RunTime:0.0470s ]
+NOTIC: [2] krsort() expects parameter 1 to be array, null given E:\code\aastory\Application\Admin\Model\RulesModel.class.php 第 24 行.
+NOTIC: [2] array_values() expects parameter 1 to be array, null given E:\code\aastory\Application\Admin\Model\RulesModel.class.php 第 25 行.
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 0 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0448s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 658 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 668 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0448s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 659 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0445s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 660 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0448s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 661 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0462s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 662 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0472s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 663 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0442s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 664 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0445s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 665 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0443s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 666 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0443s ]
+SQL: SELECT * FROM `aas_admin_rules` WHERE `pid` = 667 AND `status` = 1 ORDER BY orderid   [ RunTime:0.0454s ]
+SQL: SHOW COLUMNS FROM `aas_users` [ RunTime:0.0451s ]
+SQL: SELECT * FROM `aas_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0446s ]
+

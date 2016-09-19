@@ -28,13 +28,10 @@ class IndexController extends BaseController {
         $userdata = $user->getByUser($name);
 
         //验证用户名密码
-        $memory = 3600*24*7; // 保持记录一个礼拜
+        //$memory = 3600*24*7; // 保持记录一个礼拜
         if($userdata && $userdata['user_pass'] == md5($password . '^' . $userdata['user_activation_key'])) {
-            cookie('uid',$userdata['id'], $memory);
-            cookie('auth', authcode($userdata['id'] . "\t" . $userdata['user_pass'] . "\t" . get_client_ip(). "\t" . 'web', 'ENCODE'), $memory);
-                            $data['status']  = false; $data['content'] = '无效的用户名或密码2。';
-                $this->ajaxreturn($data);
-                exit;
+            cookie('uid',$userdata['id']);
+            cookie('auth', authcode($userdata['id'] . "\t" . $userdata['user_pass'] . "\t" . get_client_ip(). "\t" . 'web', 'ENCODE'));
         }else{
             $data['status']  = false;
             $data['content'] = '无效的用户名或密码。';
