@@ -53,6 +53,7 @@
             <div>
                 <input type="password" name="password" id="password" class="form-control" required="required"
                        placeholder="密码">
+                    <a>{$errormsg}</a>
             </div>
             <!--<div>-->
             <!--<input type="text" name="verify" id="verify" class="form-control" required="required" placeholder="验证码">-->
@@ -68,30 +69,31 @@
 </div>
 <script>
 
-    $('#aastroy_login_form').submit(function(event){
-        event.preventDefault();
-        var name = $('#name').val();
-        var password = $('#password').val();
-        $.ajax({
-            url: $(this).attr('action'),
-            data : {
-                'name':name,
-                'password':password
-            },
-            type : "post",
-            dataType : "json",
-            success : function(data) {alert("登陆称谷歌");
-                if(!data.status){
-                    alert(data.content);
-                }else {
-                    window.location.href = '/admin.php';
-                }
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert('失败'+textStatus+":"+errorThrown+":"+XMLHttpRequest.status);
-            },
-        });
-    });
+//    $('#aastroy_login_form').submit(function(event){
+//        event.preventDefault();
+//        var name = $('#name').val();
+//        var password = $('#password').val();alert($(this).attr('action'));
+//        alert(location.href);
+//        $.ajax({
+//            url: $(this).attr('action'),
+//            data : {
+//                'name':name,
+//                'password':password
+//            },
+//            type : "post",
+//            dataType : "json",
+//            success : function(data) {alert("登陆称谷歌");
+//                if(!data.status){
+//                    alert(data.content);
+//                }else {
+//                    window.location.href = '/admin.php';
+//                }
+//            },
+//            error: function(XMLHttpRequest, textStatus, errorThrown) {
+//                alert('失败'+textStatus+":"+errorThrown+":"+XMLHttpRequest.status);
+//            },
+//        });
+//    });
 </script>
 
 </body>

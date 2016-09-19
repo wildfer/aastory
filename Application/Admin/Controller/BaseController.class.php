@@ -6,28 +6,27 @@ class BaseController extends Controller {
 	public $uid = null;
 	public $order_status = array();
 	public function _initialize(){
-        //$this->init_user();
+        $this->init_user();
         $this->initRules();
         $this->initAllrules();
 	}
 	//验证用户
 	private function init_user() {
         //是否已经登陆
-        $this->uid = cookie('uid');
-        if ($this->uid) {
-            $user = D('Users');
-            $this->userInfo = $user->getByUserByID($this->uid);
-            $assign = array(
-                'uid' => $this->uid,
-                'userInfo' => $this->userInfo,
-            );
-            $this->assign($assign);
-        }else{
+        if(!in_array(ACTION_NAME,explode(',',"login,initLogin,verify"))){
+            $this->uid = cookie('uid');
+            if ($this->uid) {
+                $user = D('Users');
+                $this->userInfo = $user->getByUserByID($this->uid);
+                $assign = array(
+                    'uid' => $this->uid,
+                    'userInfo' => $this->userInfo,
+                );
+                $this->assign($assign);
 
-//            if(!strstr(__ACTION__,'initLogin')){
-//                $this->redirect("Index/initLogin");
-//                exit(0);
-//            }
+            } else {
+                $this->redirect("Index/login");
+            }
         }
 	}
 	/*初始化所有菜单*/

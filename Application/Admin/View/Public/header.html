@@ -54,12 +54,13 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">登陆用户</a>
+                    <a class="brand" href="#">开始</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
-                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
-
+                            <notempty name="uid">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>{$userInfo['user_nicename']}
+                                    <i class="caret"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -67,15 +68,13 @@
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a tabindex="-1" href="#">Logout</a>
+                                        <a tabindex="-1" href="{:getNavUrlEx('Index','logout')}">退出</a>
                                     </li>
                                 </ul>
+                            </notempty>
                             </li>
                         </ul>
                         <ul class="nav">
-                            <li class="active">
-                                    <a href="#">开始</a>
-                            </li>
                             <volist name="rules" id="vo">
                                 <li class="dropdown">
                                     <a href="{$vo|getNavUrl}"  id="{$vo.id}">{$vo.title}
