@@ -29,7 +29,8 @@ class IndexController extends BaseController {
             );
             $this->assign($assign);
             //$this->success('登录成功', 'Index/index');
-            $this->display("Index/index");
+            //$this->redirect("");
+            $this->redirect('Index/index');
         }else{
             $this->assign('errormsg','无效的用户');
             $this->display("Index/login");

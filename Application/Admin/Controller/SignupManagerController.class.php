@@ -1,19 +1,14 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class AdminController extends BaseController {
+class SignupManagerController extends BaseController {
 	function index() {
-		$user = D('Users');
-		$adminArr = $user->getAdminArr();
-		$this->assign('adminArr',$adminArr);
+		$signup = D('Signup');
+		$signupArr = $signup->getsignupArr();
+		$this->assign('signupArr',$signupArr);
 		$this->display("index");
 	}
 	function initAdd(){
-
-		$rule = D('Rules');
-		/*获取权限列表*/
-		$grouplist = $rule->getAdminGroup();
-		$this->assign('grouplist',$grouplist);
 		$this->display("add");
 	}
 	function add(){

@@ -59,7 +59,7 @@ function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
 function getNavUrl( $rules )
 {
 	$link = '' ;
-	$link .= '?c=' . $rules['module'];
+	$link .= '/admin.php?c=' . $rules['module'];
 	$link .= $rules['action'] ? '&a=' . $rules['action'] : '';
 	if ( strstr($rules['data'],'menuid')===false) {
 		$link .= '&menuid='.$rules['id'];
@@ -73,7 +73,7 @@ function getNavUrl( $rules )
 function getNavUrlEx($module,$action,$menuid)
 {
 	$link = '' ;
-	$link .= '?c=' .$module;
+	$link .= '/admin.php?c=' .$module;
 	$link .= '&a=' .$action;
 	$link .= $menuid != ''?'&menuid='. $menuid:'';
 	return $link;
