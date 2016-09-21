@@ -10,6 +10,12 @@ class SignupModel  {
 		$m = M('signup');
 		return $m->order('id ')->select();
 	}
-
+    /**
+     * 新增
+     */
+    public function add($data){
+        $m = M('signup');
+        return $m->add($data);
+    }
 };
 ?>
