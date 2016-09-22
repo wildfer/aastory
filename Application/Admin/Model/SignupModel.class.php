@@ -17,5 +17,14 @@ class SignupModel  {
         $m = M('signup');
         return $m->add($data);
     }
+
+    /**
+     * 更新
+     */
+    public function updateByID($signupid,$data){
+        $m = M('signup');
+        $condition['id'] = $signupid;
+        return $m->where($condition)->setField($data);
+    }
 };
 ?>

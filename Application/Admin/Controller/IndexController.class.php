@@ -9,17 +9,17 @@ class IndexController extends BaseController {
     function login(){
         $name=I('name');
         $password=I('password');
-        $user = D('Users');
+        $user = D('Admin');
         if (!$name){
             $this->display("Index/login");
             exit;
         }
-        $userdata = $user->getByUser($name);
+        $userdata = $user->getByLogin($name);
         //验证用户名密码
         //$memory = 3600*24*7; // 保持记录一个礼拜
         if($userdata && $userdata['user_pass'] == md5($password . '^' . $userdata['user_activation_key'])) {
-            cookie('uid',$userdata['id']);
-            cookie('auth', authcode($userdata['id'] . "\t" . $userdata['user_pass'] . "\t" . get_client_ip(). "\t" . 'web', 'ENCODE'));
+            cookie('aastory_admin_id',$userdata['id']);
+            cookie('astory_admin_auth', authcode($userdata['id'] . "\t" . $userdata['user_pass'] . "\t" . get_client_ip(). "\t" . 'web', 'ENCODE'));
 
             $userInfo = $user->getByUserByID($userdata['id']);
             $this->uid = $userdata['id'];
@@ -35,34 +35,10 @@ class IndexController extends BaseController {
             $this->assign('errormsg','无效的用户');
             $this->display("Index/login");
         }
-
-
-//        $this->uid = cookie('uid');
-//        if ($this->uid) {
-//            $data['status']  = true;
-//            $this->ajaxreturn($data);
-//            exit;
-//        }
-//        $name=I('name');
-//        $password=I('password');
-//        $user = D('Users');
-//        $userdata = $user->getByUser($name);
-//        //验证用户名密码
-//        //$memory = 3600*24*7; // 保持记录一个礼拜
-//        if($userdata && $userdata['user_pass'] == md5($password . '^' . $userdata['user_activation_key'])) {
-//            cookie('uid',$userdata['id']);
-//            cookie('auth', authcode($userdata['id'] . "\t" . $userdata['user_pass'] . "\t" . get_client_ip(). "\t" . 'web', 'ENCODE'));
-//        }else{
-//            $data['status']  = false;
-//            $data['content'] = '无效的用户名或密码。';
-//            $this->ajaxreturn($data);
-//            exit;
-//        }
-//        $this->ajaxreturn($data);
     }
     function logout(){
-        cookie('auth', null);
-        cookie('uid',null);
+        cookie('astory_admin_auth', null);
+        cookie('aastory_admin_id',null);
         $this->display("Index/login");
     }
     function verify(){

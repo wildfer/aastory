@@ -3,13 +3,12 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends BaseController {
 	function index() {
-		$user = D('Users');
+		$user = D('Admin');
 		$adminArr = $user->getAdminArr();
 		$this->assign('adminArr',$adminArr);
 		$this->display("index");
 	}
 	function initAdd(){
-
 		$rule = D('Rules');
 		/*获取权限列表*/
 		$grouplist = $rule->getAdminGroup();
@@ -17,33 +16,32 @@ class AdminController extends BaseController {
 		$this->display("add");
 	}
 	function add(){
-		$user = D('Users');
-		if ($user->getByLoginAll()){
+        $userlogin=I('user_login');
+        $userPhone=I('user_phone');
+        $gid = I('groupgid');
+        $usernicename=I('realname');
+        $pass=I('pass');
+        /*插入管理员表*/
+        $user = D('Admin');
+		if ($user->getByLogin($userlogin)){
 			$this->error("用户已经存在");	
 		}
-		if ($user->getByPhone()){
+		if ($user->getByPhone($userPhone)){
 			$this->error("号码已经被使用");	
 		}
 		/*插入用户表*/
 		$userdata= array();
-		$userdata['user_login'] = I('user_login');
-		$userdata['user_phone'] = I('user_phone');
-		$userdata['user_nicename'] = I('realname');
-		$userdata['user_email'] = I('email');
+		$userdata['user_login'] =$userlogin;
+		$userdata['user_phone'] = $userPhone;
+		$userdata['user_nicename'] = $usernicename;
+        $userdata['gid'] = $gid;
 
 		if(I('pass')) {
-			$userdata['user_activation_key'] = substr(md5(I('pass') . time()), 5, 5);
-			$userdata['user_pass'] = md5(I('pass') . '^' . $userdata['user_activation_key']);
+			$userdata['user_activation_key'] = substr(md5($pass . time()), 5, 5);
+			$userdata['user_pass'] = md5($pass . '^' . $userdata['user_activation_key']);
 		}
 		$userdata['user_registered'] = date('Y-m-d H:i:s',time());
-		
 		$userinfo = $user->add($userdata);
-		//插入用户附加属性
-		$usermetadata = array();
-		$usermetadata['user_id'] = $userinfo;
-		$usermetadata['meta_key'] = 'admin_group_admin';//管理员属性
-		$usermetadata['meta_value'] = I('groupgid');
-		$user->addmeta($usermetadata);
 
 		$adminArr = $user->getAdminArr();
 		$this->assign('adminArr',$adminArr);

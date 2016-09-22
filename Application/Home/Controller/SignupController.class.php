@@ -5,6 +5,10 @@ class SignupController extends BaseController {
 	function index() {
 		$this->display("index");
 	}
+    function detail() {
+        $menuid=I('get.menuid');
+        $this->display("Signup_".$menuid);
+    }
 	/*报名*/
     function add(){
         $user = D('Users');

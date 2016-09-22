@@ -6,7 +6,7 @@ class BaseController extends Controller {
 	public $uid = null;
 	public $order_status = array();
 	public function _initialize(){
-        $this->init_user();
+        //$this->init_user();
         $this->initRules();
         $this->initAllrules();
 	}
@@ -14,9 +14,9 @@ class BaseController extends Controller {
 	private function init_user() {
         //是否已经登陆
         if(!in_array(ACTION_NAME,explode(',',"login,initLogin,verify"))){
-            $this->uid = cookie('uid');
+            $this->uid = cookie('aastory_admin_id');
             if ($this->uid) {
-                $user = D('Users');
+                $user = D('Admin');
                 $this->userInfo = $user->getByUserByID($this->uid);
                 $assign = array(
                     'uid' => $this->uid,
@@ -58,8 +58,5 @@ class BaseController extends Controller {
 		$this->assign('leftPid',$rule->getTopNavID(I('get.menuid'))['id']);	
 		$this->assign('menuid',I('get.menuid'));
 	}
-
-	
-	
 
 }
