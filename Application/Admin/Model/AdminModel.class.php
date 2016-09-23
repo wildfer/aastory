@@ -31,6 +31,13 @@ class AdminModel extends BaseModel {
         $m = M('admin_member');
         return $m->add($data);
     }
+    /* 获取指定用户*/
+    public function getByUserByID($userID=0){
+        $m = M('admin_member');
+        $condition= array();
+        $condition['id'] = $userID;
+        return $m->where($condition)->find();
+    }
 
 };
 ?>

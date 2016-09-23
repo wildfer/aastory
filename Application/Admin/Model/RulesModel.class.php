@@ -33,5 +33,16 @@ class RulesModel  {
 		$m = M('admin_group');
 		return $m->select();
 	}
+    /*获取权限列表*/
+    public function addAdminGroup($data){
+        $m = M('admin_group');
+        return $m->add($data);
+    }
+    /*获取权限列表*/
+    public function getAdminGroupByGid($gid){
+        $m = M('admin_group');
+        $condition['gid'] = $gid;
+        return $m->where($condition)->find();
+    }
 };
 ?>

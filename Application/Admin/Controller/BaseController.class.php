@@ -2,13 +2,14 @@
 namespace Admin\Controller;
 use Think\Controller;
 class BaseController extends Controller {
-	public $memberInfo = null;
+	public $userInfo = null;
 	public $uid = null;
 	public $order_status = array();
 	public function _initialize(){
-        //$this->init_user();
+        $this->init_user();
         $this->initRules();
         $this->initAllrules();
+        $this->checkRules();
 	}
 	//验证用户
 	private function init_user() {
@@ -23,7 +24,6 @@ class BaseController extends Controller {
                     'userInfo' => $this->userInfo,
                 );
                 $this->assign($assign);
-
             } else {
                 $this->redirect("Index/login");
             }
@@ -58,5 +58,25 @@ class BaseController extends Controller {
 		$this->assign('leftPid',$rule->getTopNavID(I('get.menuid'))['id']);	
 		$this->assign('menuid',I('get.menuid'));
 	}
-
+	/*核实使用权限*/
+    public function checkRules()
+    {
+        //$this->error('您没有足够的权限','/');
+        $rule = D('Rules');
+        $groupRules = $rule->getAdminGroupByGid($this->userInfo['gid']);
+        /*超级管理员*/
+        if ($groupRules['rules']=='ALL'){
+            return true;
+        }
+        $rules = explode(',', $groupRules['rules']);
+        $menuid = I('get.menuid');
+        //echo "<script>alert('test1'+$menuid));</script>";
+        if (empty($menuid)){
+            return false;
+        }else if (in_array($menuid,$rules)){
+            return true;
+        }else{
+            $this->error('您没有足够的权限','/admin.php');
+        }
+    }
 }

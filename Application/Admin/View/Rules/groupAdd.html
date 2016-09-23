@@ -1,0 +1,137 @@
+<include file="Public/header" />
+<include file="Public/left" />
+<div class="span12" id="content">
+ <!-- validation -->
+<div class="row-fluid">
+     <!-- block -->
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">增加角色</div>
+        </div>
+        <div class="block-content collapse in">
+            <div class="span12">
+				<!-- BEGIN FORM-->
+				<form action={:getNavUrlEx('Rules','addGroup',$menuid)} id="from_admin_group" class="form-horizontal"  method="post">
+					<fieldset>
+							<div class="row-fluid">
+								<label class="control-label">角色名:<span class="required">*</span></label>
+								<div class="controls">
+									<input type="text" name="title" id="title" data-required="1" class="span6 m-wrap"/>
+								</div>
+							</div>
+						<div class="row-fluid">
+							<div class="block">
+								<div class="navbar navbar-inner block-header">
+									<div class="muted pull-left">权限 Table</div>
+								</div>
+								<div class="block-content collapse in">
+									<div class="span12">
+										<table class="table">
+											<tr>
+												<th><input type="checkbox" id="selectall"></th>
+												<th>ID</th>
+												<th>名称</th>
+												<th>module</th>
+												<th>action</th>
+												<th>data</th>
+												<th>dataplus</th>
+												<th>状态</th>
+											</tr>
+											<volist name="rules" id="vo">
+												<tr class="line">
+													<td><input type="checkbox" name="ids[]" class="ids" value="{$vo.id}"></td>
+													<td>{$vo.id}</td>
+													<td>{$vo.title}</td>
+													<td>{$vo.module}</td>
+													<td>{$vo.action}</td>
+													<td>{$vo.data}</td>
+													<td>{$vo.dataplus}</td>
+													<td>{$vo.status}</td>
+												</tr>
+												<volist name="vo.children" id="vv">
+													<tr class="line">
+														<td><input type="checkbox" name="ids[]" class="ids" value="{$vv.id}">
+														</td>
+														<td>{$vv.id}</td>
+														<td>├──{$vv.title}</td>
+														<td>{$vv.module}</td>
+														<td>{$vv.action}</td>
+														<td>{$vv.data}</td>
+														<td>{$vv.dataplus}</td>
+														<td>{$vv.status}</td>
+													</tr>
+													<volist name="vv.children" id="vvv">
+														<tr class="line">
+															<td><input type="checkbox" name="ids[]" class="ids" value="{$vvv.id}"></td>
+															<td>{$vvv.id}</td>
+															<td>├──┼──{$vv.title}</td>
+															<td>{$vvv.module}</td>
+															<td>{$vvv.action}</td>
+															<td>{$vvv.data}</td>
+															<td>{$vvv.dataplus}</td>
+															<td>{$vvv.status}</td>
+														</tr>
+													</volist>
+												</volist>
+											</volist>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+							<div class="control-label">
+								<input type="button" id="checkadd" class="btn btn-primary" value="提交"/>
+								<a type="button" class="btn" href={:getNavUrlEx('Rules','indexGroup',$menuid)}>取消</a>
+							</div>
+					</fieldset>
+				</form>
+				<!-- END FORM-->
+			</div>
+		</div>
+	</div>
+ 	<!-- /block -->
+</div>
+ <!-- /validation -->
+</div>
+
+        
+<script>
+	$(function () {
+		$('#selectall').click(function(event) {
+			if ($(this).is(':checked')) {
+				$('.ids').prop('checked',true);
+				$('.line').addClass('success')
+			}else{
+				$('.ids').prop('checked',false);
+				$('.line').removeClass('success')
+			}
+		});
+		$('.line').click(function(event) {
+			if (event.target.className=='success') {
+				return;
+			};
+			$(this).toggleClass('success');
+			if ( $(this).find('.ids').is(':checked') ) {
+				$(this).find('.ids').prop('checked',false)
+			}else{
+				$(this).find('.ids').prop('checked',true);
+			}
+		});
+		$('.ids').click(function(event) {
+			if ( $(this).is(':checked') ) {
+				$(this).prop('checked',false)
+			}else{
+				$(this).prop('checked',true);
+			}
+		});
+		$('#checkadd').click(function () {
+			if ($('#title').val().length == 0) {
+				alert("角色名不能为空");
+				return false;
+			}
+			$('#from_admin_group').submit();
+		});
+	})
+</script>
+
+<include file="Public/footer" />
