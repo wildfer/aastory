@@ -25,6 +25,7 @@ class BaseController extends Controller {
                 );
                 $this->assign($assign);
             } else {
+//                redirect("admin.php/Index/login.html");
                 $this->redirect("Index/login");
             }
         }

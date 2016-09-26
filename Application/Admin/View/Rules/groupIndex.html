@@ -6,13 +6,13 @@
             <div class="row-fluid">
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">管理员列表</div>
+                        <div class="muted pull-left">权限列表</div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
                             <div class="table-toolbar">
                                 <div class="btn-group">
-                                    <a href={:getNavUrlEx('Rules','initAddGroup',$menuid)}><button class="btn btn-success">增加<i class="icon-plus icon-white"></i></button></a>
+                                    <a href={:getNavUrlEx('Rules','initAddGroup',$menuid)}"><button class="btn btn-success">增加<i class="icon-plus icon-white"></i></button></a>
                                 </div>
                             </div>
 
@@ -20,7 +20,7 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>权限组</th>
+                                    <th>权限名称</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
@@ -30,7 +30,7 @@
                                     <tr class="gradeA">
                                         <td>{$vo.gid}</td>
                                         <td>{$vo.title}</td>
-                                        <td><a href={:getNavUrlEx('Rules','initEditGroup',$menuid)}><button class="btn btn-success">编辑<i class="icon-plus icon-white"></i></button></a>
+                                        <td><a href="{:getNavUrlEx('Rules','initEditGroup',$menuid)}&gid={$vo.gid}"><button class="btn btn-success">编辑<i class="icon-plus icon-white"></i></button></a>
                                         </td>
                                     </tr>
                                 </volist>

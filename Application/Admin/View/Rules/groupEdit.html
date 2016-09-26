@@ -6,17 +6,18 @@
      <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">增加权限</div>
+            <div class="muted pull-left">增加角色</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
 				<!-- BEGIN FORM-->
-				<form action={:getNavUrlEx('Rules','addGroup',$menuid)} id="from_admin_group" class="form-horizontal"  method="post">
+				<form action="{:getNavUrlEx('Rules','editGroup',$menuid)}" id="from_admin_group" class="form-horizontal"  method="post">
 					<fieldset>
 							<div class="row-fluid">
-								<label class="control-label">角色名:<span class="required">*</span></label>
+								<label class="control-label">权限组名称:</label>
 								<div class="controls">
-									<input type="text" name="title" id="title" data-required="1" class="span6 m-wrap"/>
+									<input type="hidden" id="gid" name="gid" value="{$groupRulesInfo['gid']}">
+									<input type="text" name="title" id="title" data-required="1" class="span6 m-wrap" value="{$groupRulesInfo['title']}" readonly/>
 								</div>
 							</div>
 						<div class="row-fluid">
@@ -39,7 +40,15 @@
 											</tr>
 											<volist name="rules" id="vo">
 												<tr class="line">
-													<td><input type="checkbox" name="ids[]" class="ids" value="{$vo.id}"></td>
+													<td>
+														<in name="vo.id" value="$groupRulesInfo['rules']">
+															<input type="checkbox" name="ids[]" class="ids" value="{$vo.id}"  checked ='true'>
+															<else/>
+															<input type="checkbox" name="ids[]" class="ids" value="{$vo.id}">
+														</in>
+
+													</td>
+
 													<td>{$vo.id}</td>
 													<td>{$vo.title}</td>
 													<td>{$vo.module}</td>
@@ -50,7 +59,12 @@
 												</tr>
 												<volist name="vo.children" id="vv">
 													<tr class="line">
-														<td><input type="checkbox" name="ids[]" class="ids" value="{$vv.id}">
+														<td>
+															<in name="vv.id" value="$groupRulesInfo['rules']">
+																<input type="checkbox" name="ids[]" class="ids" value="{$vv.id}"  checked ='true'>
+																<else/>
+																<input type="checkbox" name="ids[]" class="ids" value="{$vv.id}">
+															</in>
 														</td>
 														<td>{$vv.id}</td>
 														<td>├──{$vv.title}</td>
@@ -62,7 +76,12 @@
 													</tr>
 													<volist name="vv.children" id="vvv">
 														<tr class="line">
-															<td><input type="checkbox" name="ids[]" class="ids" value="{$vvv.id}"></td>
+															<td>
+																<in name="vvv.id" value="$groupRulesInfo['rules']">
+																	<input type="checkbox" name="ids[]" class="ids" value="{$vvv.id}"  checked ='true'>
+																	<else/>
+																	<input type="checkbox" name="ids[]" class="ids" value="{$vvv.id}">
+																</in>
 															<td>{$vvv.id}</td>
 															<td>├──┼──{$vv.title}</td>
 															<td>{$vvv.module}</td>
@@ -125,10 +144,6 @@
 			}
 		});
 		$('#checkadd').click(function () {
-			if ($('#title').val().length == 0) {
-				alert("角色名不能为空");
-				return false;
-			}
 			$('#from_admin_group').submit();
 		});
 	})

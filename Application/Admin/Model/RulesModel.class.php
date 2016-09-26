@@ -44,5 +44,11 @@ class RulesModel  {
         $condition['gid'] = $gid;
         return $m->where($condition)->find();
     }
+    /*更新*/
+    public function updateAdminGroupByID($gid,$data){
+        $m = M('admin_group');
+        $condition['gid'] = $gid;
+        return $m->where($condition)->setField($data);
+    }
 };
 ?>

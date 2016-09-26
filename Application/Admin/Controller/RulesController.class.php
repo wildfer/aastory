@@ -52,12 +52,51 @@ class RulesController extends BaseController {
     /*增加角色*/
     function addGroup(){
         $data['title'] = I('title');
-        if (!empty(I('ids'))) {
-            $data['rules'] = implode(',', I('ids'));
+        $ids = I('ids');
+        if (!empty($ids)) {
+            $data['rules'] = implode(',', $ids);
         }
         $rule = D('Rules');
         $groupID = $rule->addAdminGroup($data);
        // $this->redirect("Index/index");
         $this->success("增加成功");
+    }
+    /*增加时初始化菜单*/
+    function initEditGroup(){
+        $gid =I('gid');
+        $rule = D('Rules');
+        $groupRulesInfo = $rule->getAdminGroupByGid($gid);
+        $rules = $rule->getrules(0);
+        foreach ($rules as $k => $v) {
+            $chilrenLV_1 =  $rule->getrules($v['id']);
+            if ( $chilrenLV_1 ) {
+                foreach ($chilrenLV_1 as $kk => $vv) {
+                    $chilrenLV_2 = $rule->getrules($vv['id']);
+                    if ($chilrenLV_2) {
+                        foreach ($chilrenLV_2 as $kkk => $vvv) {
+                            $chilrenLV_3 = $rule->getrules($vvv['id']);
+                            $chilrenLV_2[$kkk]['children'] = $chilrenLV_3;
+                        }
+                    }
+                    $chilrenLV_1[$kk]['children'] = $chilrenLV_2;
+                }
+            }
+            $rules[$k]['children'] = $chilrenLV_1;
+        }
+        $this->assign('rules',$rules);
+        $this->assign('groupRulesInfo',$groupRulesInfo);
+        $this->display("Rules/groupEdit");
+    }
+    /*增加角色*/
+    function editGroup(){
+        $gid =I('gid');
+        $ids = I('ids');
+        if (!empty($ids)) {
+            $data['rules'] = implode(',',$ids);
+        }
+        $rule = D('Rules');
+        $groupID = $rule->updateAdminGroupByID($gid,$data);
+        echo "<script>alert('更新成功');</script>";
+        $this->display("index");
     }
 }
