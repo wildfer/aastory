@@ -30,7 +30,10 @@
                                     <tr class="gradeA">
                                         <td>{$vo.gid}</td>
                                         <td>{$vo.title}</td>
-                                        <td><a href="{:getNavUrlEx('Rules','initEditGroup',$menuid)}&gid={$vo.gid}"><button class="btn btn-success">编辑<i class="icon-plus icon-white"></i></button></a>
+                                        <td>
+                                            <if condition="$vo.title neq '超级管理员' ">
+                                                <a href="{:getNavUrlEx('Rules','initEditGroup',$menuid)}&gid={$vo.gid}"><button class="btn btn-success">编辑<i class="icon-plus icon-white"></i></button></a>
+                                            </if>
                                         </td>
                                     </tr>
                                 </volist>
