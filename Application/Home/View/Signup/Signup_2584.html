@@ -1,1 +1,58 @@
-<form><p>姓名<input type="text" name="name"/></p><p>手机<input type="text" name="phone"/></p><p>小区2<input type="text" name="area"/></p></form>
+<html>
+<head>
+    <script type="text/javascript" src="__MYBoots__/js/jquery.js"></script>
+    </head>
+<form id="active-form" name="contact-form" method="post" action="/?c=Signup&a=send_smsverify">
+    <p>姓名<input type="text" name="name"/></p>
+    <p>手机<input type="text" name="phone" id = 'phone'/></p>
+    <p>验证码<input type="text" name="smsverify"/>
+        <input type="button" name='sendsms' id = 'sendsms' value="发送手机验证码" title ="发送手机验证码"/>
+    </p>
+    <p>小区2<input type="text" name="area"/></p>
+</form>
+<script>
+        $("#sendsms").click(function () {
+            var phone = $('#phone').val();
+            alert(phone);
+            $.ajax({
+                url: "/?c=Signup&a=sendSmsverify",
+                dataType: "json",
+                data:{
+                    phone:phone,
+                },
+                type: "post",
+                success: function () {
+                    alert("发送短信成功");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert('发送短信失败'+textStatus+":"+errorThrown+":"+XMLHttpRequest.status);
+                }
+            });
+        });
+
+//        $('#active-form').submit(function (event) {
+//            event.preventDefault();
+//            var name = $('#name').val();
+//            var password = $('#password').val();
+//            var verify_code = $('#verify').val();
+//            $.ajax({
+//                url: $(this).attr('action'),
+//                data: {
+//                    'verify_code': verify_code,
+//                    'name': name,
+//                    'password': password
+//                },
+//                type: "post",
+//                dataType: "json",
+//                success: function (data) {
+//                    if (!data.status) {
+//                        alert(data.content);
+//                        $('#verify_code').attr('src', '/?c=Users&a=verify');
+//                    } else {
+//                        window.location.href = '/';
+//                    }
+//                }
+//            });
+//        });
+</script>
+</html>
